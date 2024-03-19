@@ -4,6 +4,24 @@
   <listeners>
     <listener class-name="utilities.ExtentReportManager"/>
   </listeners>
+  <test thread-count="5" name="Test1(failed)">
+    <parameter name="Url" value="https://www.urbanladder.com/"/>
+    <parameter name="Browser" value="chrome"/>
+    <classes>
+      <class name="test_Book.BaseClass">
+        <methods>
+          <include name="setup_Browser"/>
+          <include name="displayBookShelves"/>
+          <include name="giftCardformPositive"/>
+          <include name="giftCardformNegative"/>
+          <include name="close_Browser"/>
+          <include name="giftCard"/>
+          <include name="ByAtHome"/>
+          <include name="VerifyWebsite"/>
+        </methods>
+      </class> <!-- test_Book.BaseClass -->
+    </classes>
+  </test> <!-- Test1(failed) -->
   <test thread-count="5" name="Test2(failed)">
     <parameter name="Url" value="https://www.urbanladder.com/"/>
     <parameter name="Browser" value="edge"/>
@@ -12,7 +30,11 @@
         <methods>
           <include name="setup_Browser"/>
           <include name="displayBookShelves"/>
+          <include name="giftCardformPositive"/>
+          <include name="giftCardformNegative"/>
+          <include name="giftCard"/>
           <include name="close_Browser"/>
+          <include name="VerifyWebsite"/>
           <include name="ByAtHome"/>
         </methods>
       </class> <!-- test_Book.BaseClass -->

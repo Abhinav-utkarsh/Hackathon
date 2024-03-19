@@ -103,7 +103,7 @@ public class TC_005_GiftCardFormsNegative extends BaseClass {
 		// click confirm button
 
 		driver.findElement(By.cssSelector("button[type='submit']")).click();
-		Thread.sleep(5000);
+		Thread.sleep(10000);
 		
 		TakesScreenshot screenshot = (TakesScreenshot) driver;
 		File source = screenshot.getScreenshotAs(OutputType.FILE);

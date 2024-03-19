@@ -25,11 +25,12 @@ import test_Book.POM.PageObjectModel;
 public class BaseClass  {
 	static public WebDriver driver;
 	PageObjectModel pom;
+	
 	@BeforeTest
 	@Parameters({ "Browser", "Url" })
 	void setup_Browser(String browser, String appUrl) {
 		if (browser.equalsIgnoreCase("chrome")) {
-			WebDriverManager.chromedriver().setup();
+//			WebDriverManager.chromedriver().setup();
 			driver = new ChromeDriver();
 		} else if (browser.equalsIgnoreCase("edge")) {
 			WebDriverManager.edgedriver().setup();
@@ -38,7 +39,6 @@ public class BaseClass  {
 			WebDriverManager.firefoxdriver().setup();
 			driver = new FirefoxDriver();
 		}
- 
 		driver.manage().timeouts().implicitlyWait(Duration.ofMinutes(5));
 		driver.get(appUrl);
 		// Maximize the window.

@@ -7,8 +7,8 @@
 	<test name="Test1">
 		<parameter name="Browser" value="chrome"></parameter>
 		<parameter name="Url" value="https://www.urbanladder.com/"></parameter>
-		
 		<!-- Grouping things here for sanity , regression etc. -->
+
 		<!--<groups> <run> <include name="Sanity"></include> </run> </groups> -->
 
 		<classes>
@@ -19,8 +19,8 @@
 	<test thread-count="5" name="Test2">
 		<parameter name="Browser" value="edge"></parameter>
 		<parameter name="Url" value="https://www.urbanladder.com/"></parameter>
-		
 		<!-- Grouping things here for sanity , regression etc. -->
+
 		<!--<groups> <run> <include name="Sanity"></include> </run> </groups> -->
 
 		<classes>
